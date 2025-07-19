@@ -7,7 +7,7 @@ dotenv.config();
 const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = process.env.TO_EMAIL;
 const FROM_EMAIL = process.env.FROM_EMAIL;
-
+const LICENCE_NUMBER = process.env.LICENCE_NUMBER;
 const url = 'https://www.service.transport.qld.gov.au/SBSExternal/application/CleanBookingDE.xhtml?dswid=-6205';
 
 let counter = 0;
@@ -62,8 +62,8 @@ const handleContactDetails = async (page) => {
     const frmTestTypeItemId = '#CleanBookingDEForm\\:productType_1';
     const frmContinueBtnId = '#CleanBookingDEForm\\:actionFieldList\\:confirmButtonField\\:confirmButton'
 
-    const licenceNumber = '147388544';
-    const contactName = 'Declan';
+    const licenceNumber = LICENCE_NUMBER;
+    const contactName = 'John Doe';
     const phoneNumber = '0425428312';
 
     await wait(2);
